@@ -137,6 +137,8 @@ button {
 .link--icon {
   color: var(--clr-fg);
   font-size: 1.2rem;
+  margin-right: 10px;
+  margin-left: 10px;
 }
 
 .btn {
@@ -295,6 +297,7 @@ main {
   text-align: center;
   box-shadow: var(--shadow);
   transition: transform 0.2s linear;
+  max-width: 50%;
 }
 
 .project:hover {
