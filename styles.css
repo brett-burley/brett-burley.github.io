@@ -297,7 +297,7 @@ main {
   text-align: center;
   box-shadow: var(--shadow);
   transition: transform 0.2s linear;
-  max-width: 50%;
+  max-width: 30%;
 }
 
 .project:hover {
