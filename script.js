@@ -1,5 +1,4 @@
 const body = document.body
-
 const btnTheme = document.querySelector('.fa-moon')
 const btnHamburger = document.querySelector('.fa-bars')
 
@@ -16,18 +15,16 @@ addThemeClass(getBodyTheme, getBtnTheme)
 const isDark = () => body.classList.contains('dark')
 
 const setTheme = (bodyClass, btnClass) => {
-
 	body.classList.remove(localStorage.getItem('portfolio-theme'))
 	btnTheme.classList.remove(localStorage.getItem('portfolio-btn-theme'))
-
-  addThemeClass(bodyClass, btnClass)
-
+	
+	addThemeClass(bodyClass, btnClass)
+	
 	localStorage.setItem('portfolio-theme', bodyClass)
 	localStorage.setItem('portfolio-btn-theme', btnClass)
 }
 
-const toggleTheme = () =>
-	isDark() ? setTheme('light', 'fa-moon') : setTheme('dark', 'fa-sun')
+const toggleTheme = () => isDark() ? setTheme('light', 'fa-moon') : setTheme('dark', 'fa-sun')
 
 btnTheme.addEventListener('click', toggleTheme)
 
@@ -50,10 +47,7 @@ btnHamburger.addEventListener('click', displayList)
 const scrollUp = () => {
 	const btnScrollTop = document.querySelector('.scroll-top')
 
-	if (
-		body.scrollTop > 500 ||
-		document.documentElement.scrollTop > 500
-	) {
+	if (body.scrollTop > 500 ||document.documentElement.scrollTop > 500) {
 		btnScrollTop.style.display = 'block'
 	} else {
 		btnScrollTop.style.display = 'none'
